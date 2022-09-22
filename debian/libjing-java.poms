@@ -1,0 +1,1 @@
+debian/jing.pom --has-package-version --java-lib --artifact=build/jing.jar

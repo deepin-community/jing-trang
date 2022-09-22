@@ -1,0 +1,196 @@
+This package was debianized by Samuel Thibault <sthibault@debian.org> on
+Tue, 01 Sep 2009 15:53:03 +0200.
+
+It is downloaded from https://github.com/relaxng/jing-trang
+Some parts are removed due to various reasons:
+- doc/gcapaper.rng
+  doc/xhtml-inlpres-1.mod
+  doc/xhtml-table-1.mod: Unsure license, not used.
+- gcj/Xerces-J-src.2.3.0.tar.gz
+  gcj/crimson-1.1.3-src.tar.gz
+  gcj/crimson.copying.txt
+  gcj/crimson.patch
+  gcj/xerces-regex.patch
+  gcj/xerces.copying.txt: Not useful for the build.
+- lib/UnicodeData-3.1.0.txt
+  lib/UnicodeData-4.0.0.txt
+  lib/*.jar
+  lib/isorelax.copying.txt
+  lib/xerces.copying.txt: Already packaged in Debian
+- mod/dtdinst/test: Unsure licenses, not mandatory.
+
+Copyright:
+
+    Copyright (c) 2001-2008 Thai Open Source Software Center Ltd
+    All rights reserved.
+
+    Copyright 2001 Martin Gudgin, Developmentor.
+    Copyright 2001 W3C (Massachusetts Institute of Technology,
+    Institut National de Recherche en Informatique et en Automatique,
+    Keio University). All Rights Reserved.
+    http://www.w3.org/Consortium/Legal/
+
+License:
+
+Part of mod/nvdl/test/nvdltest.xml and mod/nvdl/test/nrltest.xml are provided
+under the W3C Software License:
+
+    W3C^® SOFTWARE NOTICE AND LICENSE
+    
+    Copyright © 1994-2002 World Wide Web Consortium, (Massachusetts Institute
+    of Technology, Institut National de Recherche en Informatique et en
+    Automatique, Keio University). All Rights Reserved. http://www.w3.org/
+    Consortium/Legal/
+    
+    This W3C work (including software, documents, or other related items) is
+    being provided by the copyright holders under the following license. By
+    obtaining, using and/or copying this work, you (the licensee) agree that
+    you have read, understood, and will comply with the following terms and
+    conditions:
+    
+    Permission to use, copy, modify, and distribute this software and its
+    documentation, with or without modification,  for any purpose and without
+    fee or royalty is hereby granted, provided that you include the following
+    on ALL copies of the software and documentation or portions thereof,
+    including modifications, that you make:
+    
+     1. The full text of this NOTICE in a location viewable to users of the
+        redistributed or derivative work.
+     2. Any pre-existing intellectual property disclaimers, notices, or terms
+        and conditions. If none exist, a short notice of the following form
+        (hypertext is preferred, text is permitted) should be used within the
+        body of any redistributed or derivative code: "Copyright ©
+        [$date-of-software] World Wide Web Consortium, (Massachusetts
+        Institute of Technology, Institut National de Recherche en
+        Informatique et en Automatique, Keio University). All Rights
+        Reserved. http://www.w3.org/Consortium/Legal/"
+     3. Notice of any changes or modifications to the W3C files, including
+        the date changes were made. (We recommend you provide URIs to the
+        location from which the code is derived.)
+    
+    THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT
+    HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED,
+    INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS
+    FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR
+    DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS,
+    TRADEMARKS OR OTHER RIGHTS.
+    
+    COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR
+    CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR
+    DOCUMENTATION.
+    
+    The name and trademarks of copyright holders may NOT be used in
+    advertising or publicity pertaining to the software without specific,
+    written prior permission. Title to copyright in this software and any
+    associated documentation will at all times remain with copyright holders.
+    
+    ____________________________________
+    
+    This formulation of W3C's notice and license became active on August 14
+    1998 so as to improve compatibility with GPL. This version ensures that
+    W3C software licensing terms are no more restrictive than GPL and
+    consequently W3C software may be distributed in GPL packages. See the
+    older formulation for the policy prior to this date. Please see our
+    Copyright FAQ for common questions about using materials from our site,
+    including specific terms and conditions for packages like libwww, Amaya,
+    and Jigsaw. Other questions about this notice can be directed to
+    site-policy@w3.org.
+ 
+mod/schematron/src/main/com/thaiopensource/validate/schematron/resources/iso-schematron.rnc is provided under the following terms:
+
+     (c) International Organization for Standardization 2005. 
+    Permission to copy in any form is granted for use with conforming 
+    SGML systems and applications as defined in ISO 8879, 
+    provided this notice is included in all copies.
+
+mod/schematron/src/main/com/thaiopensource/validate/schematron/resources/schematron.rnc is provided under the following terms:
+
+    The Schematron software and this page are available for any public use,
+    under the conditions of the zlib/libpng license (the least restrictive)
+
+The zlib license reads as:
+
+    This software is provided 'as-is', without any express or implied
+    warranty.  In no event will the authors be held liable for any damages
+    arising from the use of this software.
+
+    Permission is granted to anyone to use this software for any purpose,
+    including commercial applications, and to alter it and redistribute it
+    freely, subject to the following restrictions:
+
+    1. The origin of this software must not be misrepresented; you must not
+       claim that you wrote the original software. If you use this software
+       in a product, an acknowledgment in the product documentation would be
+       appreciated but is not required.
+    2. Altered source versions must be plainly marked as such, and must not be
+       misrepresented as being the original software.
+    3. This notice may not be removed or altered from any source distribution.
+
+The libpng license reads as:
+
+    The PNG Reference Library is supplied "AS IS".  The Contributing Authors
+    and Group 42, Inc. disclaim all warranties, expressed or implied,
+    including, without limitation, the warranties of merchantability and of
+    fitness for any purpose.  The Contributing Authors and Group 42, Inc.
+    assume no liability for direct, indirect, incidental, special, exemplary,
+    or consequential damages, which may result from the use of the PNG
+    Reference Library, even if advised of the possibility of such damage.
+
+    Permission is hereby granted to use, copy, modify, and distribute this
+    source code, or portions hereof, for any purpose, without fee, subject
+    to the following restrictions:
+
+    1. The origin of this source code must not be misrepresented.
+
+    2. Altered versions must be plainly marked as such and must not
+       be misrepresented as being the original source.
+
+    3. This Copyright notice may not be removed or altered from any
+       source or altered source distribution.
+
+    The Contributing Authors and Group 42, Inc. specifically permit, without
+    fee, and encourage the use of this source code as a component to
+    supporting the PNG file format in commercial products.  If you use this
+    source code in a product, acknowledgment is not required but would be
+    appreciated.
+
+The rest is provided under the following license:
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+    
+    
+        Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+    
+        Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in
+        the documentation and/or other materials provided with the
+        distribution.
+    
+        Neither the name of the Thai Open Source Software Center Ltd nor
+        the names of its contributors may be used to endorse or promote
+        products derived from this software without specific prior written
+        permission.
+    
+    
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+    "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+    LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+    A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR
+    CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+    EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+    PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The Debian packaging is:
+
+    Copyright (C) 2009, 2013 Samuel Thibault <sthibault@debian.org>
+    Copyright (C) 2013 Eugene Zhukov <jevgeni.zh@gmail.com>
+
+and is licensed under the GPL version 3, 
+see `/usr/share/common-licenses/GPL-3'.

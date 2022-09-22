@@ -1,0 +1,100 @@
+Source: jing-trang
+Priority: optional
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@alioth-lists.debian.net>
+Uploaders: Samuel Thibault <sthibault@debian.org>
+Build-Depends: debhelper-compat (= 12), maven-repo-helper
+Build-Depends-Indep: default-jdk, ant, ant-optional, testng, javacc, libsaxon-java, libsaxonhe-java, libxerces2-java, libxalan2-java, libisorelax-java, libxml-commons-resolver1.1-java, unicode-data
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
+Section: java
+Homepage: https://github.com/relaxng/jing-trang
+Vcs-Browser: https://salsa.debian.org/debian/jing-trang
+Vcs-Git: https://salsa.debian.org/debian/jing-trang.git
+
+Package: libjing-java
+Architecture: all
+Depends: ${misc:Depends}, libsaxon-java, libsaxonhe-java, libxerces2-java, libxalan2-java, libisorelax-java
+Description: RELAX NG validator - library
+ This provides a validator for
+  - RELAX NG 1.0 Specification,
+  - RELAX NG Compact Syntax, and
+  - parts of RELAX NG DTD Compatibility, specifically checking of
+ ID/IDREF/IDREFS.
+ .
+ This package contains the Java library
+
+Package: jing
+Section: text
+Architecture: all
+Depends: ${misc:Depends}, default-jre | java-runtime, libjing-java, java-wrappers
+Description: RELAX NG validator
+ This provides a validator for
+  - RELAX NG 1.0 Specification,
+  - RELAX NG Compact Syntax, and
+  - parts of RELAX NG DTD Compatibility, specifically checking of
+ ID/IDREF/IDREFS.
+
+Package: libtrang-java
+Architecture: all
+Depends: ${misc:Depends}, libxml-commons-resolver1.1-java, libxerces2-java, libjaxp1.3-java, libsaxon-java, libavalon-framework-java, libbatik-java
+Description: XML schema converter - Java library
+ Trang converts between different schema languages for XML. It supports the
+ following languages:
+  - RELAX NG (XML syntax)
+  - RELAX NG compact syntax
+  - XML 1.0 DTDs
+  - W3C XML Schema
+ .
+ This package contains the Java library
+
+Package: trang
+Section: text
+Architecture: all
+Depends: ${misc:Depends}, default-jre | java-runtime, libtrang-java, java-wrappers
+Description: XML schema converter
+ Trang converts between different schema languages for XML. It supports the
+ following languages:
+  - RELAX NG (XML syntax)
+  - RELAX NG compact syntax
+  - XML 1.0 DTDs
+  - W3C XML Schema
+
+Package: libdtdinst-java
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: XML DTD to XML instance format converter - Java library
+ dtdinst converts XML DTDs into XML instance format. The XML instance can be in
+ either a format specific to DTDinst or RELAX NG format.
+ .
+ This package contains the Java library
+
+Package: dtdinst
+Section: text
+Architecture: all
+Depends: ${misc:Depends}, default-jre | java-runtime, libdtdinst-java, java-wrappers
+Description: XML DTD to XML instance format converter
+ dtdinst converts XML DTDs into XML instance format. The XML instance can be in
+ either a format specific to DTDinst or RELAX NG format.
+
+Package: jing-trang-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, xhtml-relaxng
+Description: Jing Trang and dtdinst documentation
+ This package provides documentation for libjing-java, libtrang-java, and
+ libdtdinst-java
+
+Package: xhtml-relaxng
+Section: misc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Implementation in RELAX NG of the modularization of XHTML
+ This package contains an implementation in RELAX NG of the modularization of
+ XHTML specified by the Modularization of XHTML Recommendation
+ .
+ The RELAX NG schema has not been mechanically derived from the DTDs.  Rather,
+ it has been hand-crafted so as to produce a good quality RELAX NG schema.
+ However, it may well contain bugs.

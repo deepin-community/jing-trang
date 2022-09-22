@@ -1,0 +1,44 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with maven-repo-helper
+
+JAVAC=javac
+JAVADOC=javadoc
+JAR=jar
+
+JAVACLASSES=/usr/share/java
+CLASSPATH=$(JAVACLASSES)/isorelax.jar:$(JAVACLASSES)/xml-apis-ext.jar:$(JAVACLASSES)/xercesImpl.jar:$(JAVACLASSES)/saxon.jar:$(JAVACLASSES)/Saxon-HE.jar:$(JAVACLASSES)/xalan2.jar:$(JAVACLASSES)/testng.jar:$(JAVACLASSES)/xml-resolver-1.2.jar
+
+VERSION=20181222
+
+override_dh_auto_build:
+	CLASSPATH=$(CLASSPATH) ant -buildfile build.xml
+	ln build/jing.jar build/jing-$(VERSION).jar
+	ln build/trang.jar build/trang-$(VERSION).jar
+	ln build/dtdinst.jar build/dtdinst-$(VERSION).jar
+
+	mkdir build/doc
+	cp -a dtdinst build/doc/
+	rm build/doc/dtdinst/copying.txt
+	cp eg/relaxng.rng build/doc/
+	cp eg/xslt.rng build/doc/
+	cp convert/from-relax.xsl build/doc/
+	cp convert/simplify.xsl build/doc/
+	cp eg/relaxCore.rng build/doc/
+	cp eg/relaxCoreDatatypes.rng build/doc/
+
+override_dh_auto_clean:
+	rm -fr build
+	rm -f modbuild.xml modules.xml
+	mh_clean
+
+override_dh_auto_install:
+	cp -a xhtml/* debian/xhtml-relaxng/usr/share/xml/xhtml-relaxng
+	dh_link -plibjing-java /usr/share/java/jing-$(VERSION).jar /usr/share/java/jing.jar
+	dh_link -plibtrang-java /usr/share/java/trang-$(VERSION).jar /usr/share/java/trang.jar
+	dh_link -plibdtdinst-java /usr/share/java/dtdinst-$(VERSION).jar /usr/share/java/dtdinst.jar
+	dh_link -pjing-trang-doc /usr/share/xml/xhtml-relaxng /usr/share/doc/jing-trang-doc/doc/xhtml
+
+override_dh_compress:
+	dh_compress -X.rng -X.xsl

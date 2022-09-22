@@ -1,0 +1,225 @@
+jing-trang (20181222+dfsg2-6) unstable; urgency=medium
+
+  * control: Do not force installing the default java runtime
+    (Closes: Bug#998881).
+
+ -- Samuel Thibault <sthibault@debian.org>  Tue, 16 Nov 2021 20:11:58 +0100
+
+jing-trang (20181222+dfsg2-5) unstable; urgency=medium
+
+  * control: Set Rules-Requires-Root to no.
+  * control: Remove Eugene Zhukov from uploaders (Closes: #987144)
+  * watch: Fix URL.
+  * gbp.conf: Use filter to clean upstream tarball.
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 27 Aug 2021 21:11:15 +0200
+
+jing-trang (20181222+dfsg2-4) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * source/options: Remove compression option.
+  * watch: Generalize pattern.
+  * jing-trang-doc.doc-base: Remove, we don't actually build the javadoc.
+  * control: Update alioth list domain.
+  * control: Bump Standards-Version to 4.5.0 (no change)
+  * control: Bump debhelper compat to 12.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 01 Nov 2020 02:53:38 +0100
+
+jing-trang (20181222+dfsg2-3) unstable; urgency=medium
+
+  * Update jing.pom with new groupId and version
+
+ -- Eugene Zhukov <eugene@debian.org>  Wed, 31 Jul 2019 12:48:11 +0300
+
+jing-trang (20181222+dfsg2-2) unstable; urgency=medium
+
+  * Re-package with properly removed files.
+
+ -- Samuel Thibault <sthibault@debian.org>  Tue, 30 Jul 2019 20:28:20 +0200
+
+jing-trang (20181222+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update debhelper version to 11
+  * Refresh patches
+  * Bump Standards-Version to 4.4.0 (remove get-orig-source target)
+
+ -- Eugene Zhukov <eugene@debian.org>  Mon, 29 Jul 2019 12:38:37 +0300
+
+jing-trang (20151127+dfsg-3) unstable; urgency=medium
+
+  * Rebuild against unicode-data 12.1.0~pre1-2 (Closes: #928020)
+  * No source change.
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 10 May 2019 23:14:34 +0200
+
+jing-trang (20151127+dfsg-2) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * Bump Standards-Version to 4.2.0 (no changes).
+  * control: Set libdtdinst-java, jing-trang-doc and xhtml-relaxng to
+    multi-arch: foreign.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 04 Jan 2019 00:16:22 +0100
+
+jing-trang (20151127+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+    - jing-trang-20131210-java8.patch: Remove patch, merged upstream.
+    - trang.diff: Remove patch, merged upstream.
+  * Use canonical anonscm vcs URL.
+  * control: make jing-trang-doc depend on xhtml-relaxng (Closes: Bug#861503)
+  * control: Migrate priority to optional.
+  * control: Bump Standards-Version to 4.1.1.
+
+ -- Samuel Thibault <sthibault@debian.org>  Tue, 31 Oct 2017 00:48:54 +0100
+
+jing-trang (20131210+dfsg+1-6) unstable; urgency=medium
+
+  * control: Bump Standards-Version to 3.9.8 (no change)
+  * bin/*: Silence warnings from calling find_java_runtime openjdk sun
+    (Closes: Bug#834554)
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 04 Sep 2016 19:27:51 +0200
+
+jing-trang (20131210+dfsg+1-5) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * control: Bump Standards-Version to 3.9.7 (no change).
+
+  [ Eugene Zhukov ]
+  * Add patch for NPE issue (Closes: Bug#813332), taken from upstream
+    https://code.google.com/archive/p/jing-trang/issues/177
+  * control: update Vcs-Browser URI, upstream homepage
+  * watch: rewrite for github
+  * Remove orig-tar.sh
+
+ -- Eugene Zhukov <eugene@debian.org>  Fri, 19 Feb 2016 08:01:38 +0000
+
+jing-trang (20131210+dfsg+1-4) unstable; urgency=medium
+
+  * compat: Bump to 9.
+  * rules: Clear.
+  * control: Add missing libtrang dependencies (Closes: Bug#809050).
+
+ -- Samuel Thibault <sthibault@debian.org>  Sat, 26 Dec 2015 18:52:27 +0100
+
+jing-trang (20131210+dfsg+1-3) unstable; urgency=medium
+
+  [ Tomik Bazik ]
+  * bin/{jing,trang,dtdinst}: Use java-wrappers and define
+    xni.parser.XMLParserConfiguration (Closes: Bug#807678).
+
+  [ Samuel Thibault ]
+  * control: Make jing, trang, and dtdinst depend on java-wrappers
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 13 Dec 2015 21:07:26 +0100
+
+jing-trang (20131210+dfsg+1-2) unstable; urgency=medium
+
+  [ Eugene Zhukov ]
+  * rules: Add get-orig-source rules.
+  * orig-tar.sh: Add script to build upstream release tarball.
+  * watch: Make it able to fetch tags instead of now-extint upstream tarballs.
+
+  [ Samuel Thibault ]
+  * watch: fix to cope with dfsg+1 instead of dfsg.1.
+  * Bump Standards-Version to 3.9.6.
+    - control: Remove java2-runtime Depends alternative.
+  * patches/jing-trang-20131210-java8.patch: Cherry-pick patch from upstream
+    BTS to fix build with java 8 (Closes: Bug#745091)
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 25 Oct 2015 11:56:05 +0100
+
+jing-trang (20131210+dfsg+1-1) unstable; urgency=low
+
+  * Reintroduce schematron.rnc file, with separate licensing terms
+    (Closes: Bug#732294).
+
+ -- Samuel Thibault <sthibault@debian.org>  Mon, 16 Dec 2013 22:17:06 +0100
+
+jing-trang (20131210+dfsg-1) unstable; urgency=low
+
+  [ Samuel Thibault ]
+  * rules: Add build-indep and build-arch rules.
+  * Bump Standards-Version to 3.9.5.
+  * watch: Add dfsg mangling.
+  * debian/source: switch to 3.0 format.
+
+  [ Eugene Zhukov ]
+  * New upstream release (Closes: Bug#732003).
+  * use canonical URLs for the Vcs-* fields in d/control.
+  * rules, control: Use libsaxonhe-java instead of libsaxonb-java.
+  * rules: maven artifacts to local maven repo.
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 15 Dec 2013 21:28:29 +0100
+
+jing-trang (20091111-5) unstable; urgency=low
+
+  * Remove jre dependency from libraries.
+  * control: Bump Standards-Version to 3.9.3 (no changes).
+  * rules, control: Use libsaxonb-java instead of libreoffice-java-common
+    (Closes: Bug#669546).
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 08 Jun 2012 23:49:35 +0200
+
+jing-trang (20091111-4) unstable; urgency=low
+
+  * Bump Standards-Version to 3.9.2 (no change needed)
+  * debian/control: Use libreoffice-java-common instead of
+    openoffice.org-java-common (Closes: Bug#628286).
+  * debian/rules: Fix classpath.
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 10 Apr 2011 20:50:57 +0200
+
+jing-trang (20091111-3) unstable; urgency=low
+
+  * debian/control:
+    - Make libjing-java, libtrang-java, and libdtdinst-java depend
+    on headless java.
+    - Bump Standards-Version to 3.9.1 (no change needed).
+
+ -- Samuel Thibault <sthibault@debian.org>  Tue, 24 Aug 2010 21:23:21 +0200
+
+jing-trang (20091111-2) unstable; urgency=low
+
+  * debian/control:
+    - Bump Standards-Version to 3.8.4 (no change needed).
+    - Remove gij | java-virtual-machine Dependency from jing,
+    trang and dtdinst (Closes: #573380).
+
+ -- Samuel Thibault <sthibault@debian.org>  Thu, 28 Jan 2010 00:01:06 +0100
+
+jing-trang (20091111-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: Remove duplicate Section: java field.
+  * debian/dtdinst.1: Fix minus sign.
+  * debian/control: Fix duplicate short descriptions.
+  * debian/watch: Add.
+  * debian/jing-trang-doc.doc-base: Add.
+
+ -- Samuel Thibault <sthibault@debian.org>  Wed, 13 Jan 2010 01:02:13 +0100
+
+jing-trang (20090818-2) unstable; urgency=low
+
+  * Add a debian/README.source file explaining how the Debian tarball is
+    built.
+  * debian/control: Set the Debian XML/SGML Group as Maintainer.
+  * debian/copyright: Document why some parts were dropped.
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 01 Jan 2010 00:00:00 +0100
+
+jing-trang (20090818-1) unstable; urgency=low
+
+  * Initial release (Closes: #544547)
+
+ -- Samuel Thibault <sthibault@debian.org>  Tue, 01 Sep 2009 15:53:03 +0200

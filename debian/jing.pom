@@ -1,0 +1,8 @@
+<!-- Created by hand. Eugene Zhukov -->
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.relaxng</groupId>
+  <artifactId>jing</artifactId>
+  <version>20181222</version>
+  <packaging>jar</packaging>
+</project>

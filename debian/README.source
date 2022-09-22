@@ -1,0 +1,15 @@
+The Debian tarball is a checkout of the subversion repository
+
+http://jing-trang.googlecode.com/svn/trunk
+
+corresponding to the version released on the jing-trang website, except a bunch
+of deletions for various reasons, as can be seen in gbp.conf:
+
+- gcj/crimson-1.1.3-src.tar.gz: external work, provided as a Debian dependency,
+- gcj/crimson.copying.txt: likewise,
+- gcj/crimson.patch: likewise,
+- gcj/Xerces-J-src.2.3.0.tar.gz: likewise,
+- gcj/xerces-regex.patch: likewise,
+- gcj/xerces.copying.txt: likewise,
+- lib/*: likewise,
+- mod/dtdinst/test/*: unsure copyright,
